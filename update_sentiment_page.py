@@ -93,7 +93,7 @@ parsed_and_scored_news = parsed_and_scored_news.join(scores_df, rsuffix='_right'
 parsed_and_scored_news['date'] = pd.to_datetime(parsed_and_scored_news.date).dt.date
 
 # Group by each ticker and get the mean of all sentiment scores
-mean_scores = parsed_and_scored_news.groupby(['ticker']).mean(numeric_only=False)
+mean_scores = parsed_and_scored_news.groupby(['ticker']).mean(numeric_only=True)
 
 # Get Market Cap, Sector and Industry of each Ticker
 sectors = []
