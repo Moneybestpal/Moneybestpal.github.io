@@ -1,6 +1,7 @@
 name: Get Sentiment and update GitHub page
 
 on:
+  [push] # change to this to run immediately after pushing
   schedule:
     - cron: "*/30 * * * *" # runs every half hour
     
