@@ -150,4 +150,3 @@ with open('dow_jones_live_sentiment.html', 'a') as f:
     author = """ | Created by Damian Boh, check out my <a href="https://damianboh.github.io/">GitHub Page</a>"""
     f.write(title + updated + description + code + author)
     f.write(fig.to_html(full_html=False, include_plotlyjs='cdn')) # write the fig created above into the html file
-
