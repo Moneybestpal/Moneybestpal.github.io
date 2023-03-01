@@ -1,0 +1,11 @@
+﻿Item,Parent,Size
+Region,,100
+USA,Region,40
+Europe,Region,30
+Asia,Region,30
+California,USA,20
+New York,USA,20
+France,Europe,15
+Germany,Europe,10
+Japan,Asia,20
+China,Asia,10
