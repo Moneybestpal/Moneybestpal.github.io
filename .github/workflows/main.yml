@@ -1,8 +1,9 @@
 name: Get Sentiment and update GitHub page
 
 on:
-  schedule:
-    - cron: "*/30 * * * *" # runs every half hour
+  [push]
+  #schedule:
+  #  - cron: "*/30 * * * *" # runs every half hour
     
 jobs:
   refresh_page:
@@ -10,12 +11,12 @@ jobs:
     
     steps:
       - name: Access the repo
-        uses: actions/checkout@v2 
+        uses: actions/checkout@v3 
     
       - name: Configure Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.9.7' 
+          python-version: '3.11.2' 
       
       - name: Install necessary libraries
         run: |
