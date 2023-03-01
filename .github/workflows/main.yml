@@ -1,7 +1,7 @@
 name: Get Sentiment and update GitHub page
 
 on:
-  [push] # change to this to run immediately after pushing
+  [push]
   schedule:
     - cron: "*/30 * * * *" # runs every half hour
     
@@ -27,10 +27,10 @@ jobs:
         run: python update_sentiment_page.py
         
       - name: Clone repo from your github.io page and commit newly generated sentiment html file
-        run: | 
+        run:  
           git clone https://github.com/Moneybestpal/Moneybestpal.github.io.git/ 
           cp dow_jones_live_sentiment.html Moneybestpal.github.io/dow_jones_live_sentiment.html 
-          cd damianboh.github.io 
+          cd Moneybestpal.github.io 
           git add dow_jones_live_sentiment.html
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
